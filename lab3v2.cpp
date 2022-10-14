@@ -37,18 +37,7 @@ public:
 
 	}
 
-	//Method 2 used in class Student
-	//Setter 
-	virtual void setPerson(string Fname, string Lname, string Email, int Phone)
-	{
-		string phonetostring = std::to_string(Phone);
-		fullPerson = Fname + Lname + Email + phonetostring;
-	}
-	//Getter
-	string getPerson()
-	{
-		return fullPerson;
-	}
+	
 };
 
 //Not complete need to find a way to access specific objects in the list. The mark varible does nothing need to fix 
@@ -60,7 +49,7 @@ public:
 };
 
 
-//Student class using implementation of method 2 from parent class Person
+//Change student class to work like the staff class
 class Student : public Course, public Person {
 public:
 	string FullStudent;
@@ -140,17 +129,15 @@ int main()
 	
 	//Comment out/ remove comment for what method you want to try 
 
-
+	
 	cout << "\n----------Method 1---------\n";
 	s.getStaffData();
 	s.displayStaffData();
 	
 	
-	/*
-	cout << "\n----------Method 2---------\n";
-	stu.setStudentData("Salman ", "Virji ", "salman.virji@uleth.ca ", 1234567, 60.0, 85.0, 73.0);
-	stu.getStudent();
-	*/
+	
+	
+	
 	return 0;
 
 
