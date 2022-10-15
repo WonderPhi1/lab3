@@ -1,44 +1,82 @@
 \hypertarget{class_course}{}\doxysection{Course Class Reference}
 \label{class_course}\index{Course@{Course}}
-Inheritance diagram for Course\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_course}
-\end{center}
-\end{figure}
+
+
+\mbox{\hyperlink{class_course}{Course}} class includes the course\textquotesingle{}s names and the marks in the course.  
+
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_course_aa41c0eac68ed4704abbd379480e89f92}\label{class_course_aa41c0eac68ed4704abbd379480e89f92}} 
-{\bfseries Course} (string course\+Name, int mark)
-\item 
-\mbox{\Hypertarget{class_course_a397d8a048ca6268809c51a4fa4b1d289}\label{class_course_a397d8a048ca6268809c51a4fa4b1d289}} 
-int {\bfseries get\+Mark} ()
-\item 
-\mbox{\Hypertarget{class_course_acfd98bf64081ee4554a7312fca21a55d}\label{class_course_acfd98bf64081ee4554a7312fca21a55d}} 
-string {\bfseries get\+Course\+Name} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\mbox{\hyperlink{class_course_aa41c0eac68ed4704abbd379480e89f92}{Course}} (string course\+Name, int mark)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_course}{Course}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_course_a397d8a048ca6268809c51a4fa4b1d289}{get\+Mark}} ()
+\begin{DoxyCompactList}\small\item\em Get the Mark object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_course_acfd98bf64081ee4554a7312fca21a55d}{get\+Course\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{class_course}{Course}} Name object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_course_a1f30d6a393b9db28ddb5597c321f504a}\label{class_course_a1f30d6a393b9db28ddb5597c321f504a}} 
 string {\bfseries Course\+Name}
-\item 
-\mbox{\Hypertarget{class_course_adadc332677011551ef927e2e3b2908fd}\label{class_course_adadc332677011551ef927e2e3b2908fd}} 
-string {\bfseries Mark}
-\item 
-\mbox{\Hypertarget{class_course_ae1a07c0ae9a28a962b151e53e5c194df}\label{class_course_ae1a07c0ae9a28a962b151e53e5c194df}} 
-std\+::list$<$ string $>$ {\bfseries courselist} = \{ \char`\"{} Math \char`\"{}, \char`\"{} Social Studies \char`\"{}, \char`\"{} Science \char`\"{}, \char`\"{} PE \char`\"{}, \char`\"{} English \char`\"{} \}
-\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_course_a0383a039b50d531a411f7ca66559b110}\label{class_course_a0383a039b50d531a411f7ca66559b110}} 
 int {\bfseries Mark}
 \end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_course}{Course}} class includes the course\textquotesingle{}s names and the marks in the course. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_course_aa41c0eac68ed4704abbd379480e89f92}\label{class_course_aa41c0eac68ed4704abbd379480e89f92}} 
+\index{Course@{Course}!Course@{Course}}
+\index{Course@{Course}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{Course()}{Course()}}
+{\footnotesize\ttfamily Course\+::\+Course (\begin{DoxyParamCaption}\item[{string}]{course\+Name,  }\item[{int}]{mark }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_course}{Course}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em course\+Name} & \\
+\hline
+{\em mark} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_course_acfd98bf64081ee4554a7312fca21a55d}\label{class_course_acfd98bf64081ee4554a7312fca21a55d}} 
+\index{Course@{Course}!getCourseName@{getCourseName}}
+\index{getCourseName@{getCourseName}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{getCourseName()}{getCourseName()}}
+{\footnotesize\ttfamily string Course\+::get\+Course\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the \mbox{\hyperlink{class_course}{Course}} Name object. 
+
+\begin{DoxyReturn}{Returns}
+the course name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_course_a397d8a048ca6268809c51a4fa4b1d289}\label{class_course_a397d8a048ca6268809c51a4fa4b1d289}} 
+\index{Course@{Course}!getMark@{getMark}}
+\index{getMark@{getMark}!Course@{Course}}
+\doxysubsubsection{\texorpdfstring{getMark()}{getMark()}}
+{\footnotesize\ttfamily int Course\+::get\+Mark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Mark object. 
+
+\begin{DoxyReturn}{Returns}
+the mark in the course 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Salman/lab3/lab3v2.\+cpp\item 
-C\+:/\+Users/\+Salman/lab3/main.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/ndsou/lab3/lab3/main.\+cpp\end{DoxyCompactItemize}

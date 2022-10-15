@@ -5,6 +5,10 @@
 
 using namespace std;
 
+/**
+ * @brief 
+ * IPerson class is what creates the person's profile which includes their personal information
+ */
 class IPerson{
   protected:
     string Fname;
@@ -64,6 +68,11 @@ class IPerson{
 
 };
 
+/**
+ * @brief 
+ * Staff class that creates the staff's profile which includes their personal information, their position,
+ * department they work in, their rate and the hours they have worked
+ */
 class Staff : public IPerson{
   protected:
     /// @brief 
@@ -212,7 +221,7 @@ class Student : public IPerson {
 
 /**
  * @brief 
- * Teacher class that creates their profile which includes their personal information, the courses they are taking,
+ * Teacher class that creates their profile which includes their personal information, the courses they are teaching,
  * position, which department, the rate, hours worked, and their salary
  */
 class Teacher : public Staff{

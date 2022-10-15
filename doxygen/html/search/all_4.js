@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['staff_0',['Staff',['../class_staff.html',1,'Staff'],['../class_staff.html#afdf168fd8f0269bb65c0aa1cdac3093c',1,'Staff::Staff()']]],
-  ['student_1',['Student',['../class_student.html',1,'']]]
+  ['teacher_0',['Teacher',['../class_teacher.html',1,'Teacher'],['../class_teacher.html#a385c973406adbce11a2f9cfb45bf1485',1,'Teacher::Teacher()']]]
 ];
