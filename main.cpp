@@ -5,9 +5,8 @@
 
 using namespace std;
 
-
 class IPerson{
-  public:
+  protected:
     string Fname;
     string Lname;
     string Email;
@@ -155,7 +154,11 @@ class Staff : public IPerson{
       return fullName;
     }
 };
-/// @brief 
+
+/**
+ * @brief 
+ * Student class that creates the student profile which has their personal information, school name, courses, and their gpa
+ */
 class Student : public IPerson {
   protected:
     string School;
@@ -163,7 +166,16 @@ class Student : public IPerson {
 
   
   public:
-  
+  /**
+   * @brief Construct a new Student object
+   * 
+   * @param firstName 
+   * @param lastName 
+   * @param email 
+   * @param phone 
+   * @param school 
+   * @param courses 
+   */
     Student(string firstName, string lastName, string email, string phone, 
       string school, list<class Course> courses):
     IPerson(firstName, lastName, email, phone)
@@ -172,10 +184,22 @@ class Student : public IPerson {
       Courses = courses;
     }
 
+    /**
+     * @brief Get the School object
+     * 
+     * @return string 
+     */
     string getSchool(){
       return School;
     }
 
+    
+
+    /**
+     * @brief Get the Full Name object
+     * 
+     * @return string 
+     */
     int getGPA(){
       return 3;
     }
@@ -186,11 +210,29 @@ class Student : public IPerson {
     }
 };
 
+/**
+ * @brief 
+ * Teacher class that creates their profile which includes their personal information, the courses they are taking,
+ * position, which department, the rate, hours worked, and their salary
+ */
 class Teacher : public Staff{
   protected:
     list<class Course> Courses;
 
   public:
+  /**
+   * @brief Construct a new Teacher object
+   * 
+   * @param firstName 
+   * @param lastName 
+   * @param email 
+   * @param phone 
+   * @param position 
+   * @param department 
+   * @param rate 
+   * @param hoursWorked 
+   * @param courses 
+   */
     Teacher(string firstName, string lastName, string email, string phone,
       string position, string department, int rate, 
       int hoursWorked, list<class Course> courses):
@@ -200,27 +242,51 @@ class Teacher : public Staff{
         Courses = courses;
       }
 
+    /**
+     * @brief Get the Salary object
+     * 
+     * @return int 
+     */
     int getSalary(){
       return this->Rate * Courses.size();
     }
 };
-
+/**
+ * @brief 
+ * Course class includes the course's names and the marks in the course
+ */
 class Course{
+
   protected:
-    /// @brief 
     string CourseName;
     int Mark;
   
   public:
+  /**
+   * @brief Construct a new Course object
+   * 
+   * @param courseName 
+   * @param mark 
+   */
     Course(string courseName, int mark){
       CourseName = courseName;
       Mark = mark;
     }
-    //Get mark 
+
+    /**
+     * @brief Get the Mark object
+     * 
+     * @return the mark in the course 
+     */
     int getMark(){
       return Mark;
     }
 
+    /**
+     * @brief Get the Course Name object
+     * 
+     * @return the course name 
+     */
     string getCourseName(){
       return CourseName;
     }
