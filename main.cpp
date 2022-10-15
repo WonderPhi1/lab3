@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 class IPerson{
   public:
     string Fname;
@@ -13,26 +14,50 @@ class IPerson{
     string Phone;
 
   public:
+    /**
+     * @brief 
+     * IPerson constructer of fname ,lname,email,phone
+     */
     IPerson(string fname, string lname, string email, string phone){
       Fname = fname;
       Lname = lname;
       Email = email;
       Phone = phone;
     }
-
+    
     string getFirstName(){
+      /**
+       *  Returns first name
+       * @brief 
+       * 
+       *
+       */
       return Fname;
     }
-
+    
     string getLastName(){
+      /**
+       * @brief 
+       * Returns Lname
+       */
       return Lname;
     }
 
     string getEmail(){
+      /**
+       * @brief 
+       * Returns Email
+       * 
+       */
       return Email;
     }
-
+    
     string getPhone(){
+      /**
+       * @brief 
+       * Returns Phone
+       * 
+       */
       return Phone;
     }
 
@@ -42,12 +67,27 @@ class IPerson{
 
 class Staff : public IPerson{
   protected:
+    /// @brief 
     string Position;
     string Department;
     int Rate;
     int HoursWorked;
-
+  
   public:
+    /// @brief 
+    /// @param firstName 
+    /// @param lastName 
+    /// @param email 
+    /// @param phone 
+    /// @param position 
+    /// @param department 
+    /// @param rate 
+    /// @param hoursWorked 
+
+    /**
+     * @brief 
+     * Constructer for staff 
+     */
     Staff(string firstName, string lastName, string email, string phone, 
       string position, string department, int rate, int hoursWorked):
     IPerson(firstName, lastName, email, phone)
@@ -58,33 +98,64 @@ class Staff : public IPerson{
       Rate = rate;
       HoursWorked = hoursWorked;
     }
-
+    
     string getPosition(){
+      /**
+       * @brief 
+       * Returns Position
+       * 
+       */
       return Position;
     }
-
+     
     string getDepartment(){
+      /**
+       * @brief 
+       * Returns Department
+       * 
+       */
       return Department;
     }
-
+    
     int getRate(){
+      /**
+       * @brief 
+       * Returns Rate
+       * 
+       */
       return Rate;
     }
-
+     
     int getHoursWorked(){
+      /**
+       * @brief 
+       * Returns HoursWorked
+       * 
+       */
       return HoursWorked;
     }
-
+    
     int getSalary(){
+      /**
+       * @brief 
+       * Calculates salary by multiplying HoursWorked by Rate
+       * 
+       */
       return HoursWorked * Rate;
     }
     
     string getFullName(){
+      /**
+       * @brief 
+       * Returns fullName which is FName + Lname
+       * 
+       * 
+       */
       string fullName = this->Fname + " " + this->Lname;
       return fullName;
     }
 };
-
+/// @brief 
 class Student : public IPerson {
   protected:
     string School;
@@ -92,6 +163,7 @@ class Student : public IPerson {
 
   
   public:
+  
     Student(string firstName, string lastName, string email, string phone, 
       string school, list<class Course> courses):
     IPerson(firstName, lastName, email, phone)
@@ -135,6 +207,7 @@ class Teacher : public Staff{
 
 class Course{
   protected:
+    /// @brief 
     string CourseName;
     int Mark;
   
@@ -143,7 +216,7 @@ class Course{
       CourseName = courseName;
       Mark = mark;
     }
-
+    //Get mark 
     int getMark(){
       return Mark;
     }
@@ -175,6 +248,7 @@ int main(){
   cout << "--------------------Staff--------------------" << endl;
   cout << "Name: " << sta1->getFullName() << endl;
   cout << "Salary: " << sta1->getSalary() << endl;
+
 
   // Create Teacher and use get salary method 
   Teacher *t1 = new Teacher("Jane", "Doe", "Jane.Doe@uleth.ca", "5555557777", "Teacher", "Arts", 25, 40, courses);
