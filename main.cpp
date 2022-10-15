@@ -6,7 +6,7 @@
 using namespace std;
 
 class IPerson{
-  protected:
+  public:
     string Fname;
     string Lname;
     string Email;
@@ -105,7 +105,7 @@ class Student : public IPerson {
     }
 
     int getGPA(){
-      
+      return 3;
     }
 
     string getFullName(){
@@ -162,11 +162,30 @@ int main(){
   courses.push_back(Course("History", 70));
 
   // Create Student object and use get gpa method
+  Student* s1 = new Student("Phillip", "Obiora", "phillip.obiora@leth.ca", "4036674504", "uleth", courses);
+  cout << "--------------------Student--------------------" << endl;
+  cout << "Name: " << s1->getFullName() << endl;
+  cout << "Email: " << s1->getEmail() << endl;
+  cout << "Phone: " << s1->getPhone() << endl;
+  cout << "School: " << s1->getSchool() << endl;
+  cout << "GPA: " << s1->getGPA() << endl;
 
   // Create Staff object and use get salary method
+  Staff *sta1 = new Staff("Joe", "Blow", "Joe.Blow@uleth.ca", "7775557777", "Teacher", "Business", 30, 80);
+  cout << "--------------------Staff--------------------" << endl;
+  cout << "Name: " << sta1->getFullName() << endl;
+  cout << "Salary: " << sta1->getSalary() << endl;
 
   // Create Teacher and use get salary method 
-  
+  Teacher *t1 = new Teacher("Jane", "Doe", "Jane.Doe@uleth.ca", "5555557777", "Teacher", "Arts", 25, 40, courses);
+  cout << "--------------------Teacher--------------------" << endl;
+  cout << "Name: " << t1->getFullName() << endl;
+  cout << "Phone: " << t1->getPhone() << endl;
+  cout << "Position: " << t1->getPosition() << endl;
+  cout << "Department: " << t1->getDepartment() << endl;
+  cout << "Rate: " << t1->getRate() << endl;
+  cout << "Hours Worked: " << t1->getHoursWorked() << endl;
+  cout << "Salary: " << t1->getSalary() << endl;
 
   return 0;
 }
